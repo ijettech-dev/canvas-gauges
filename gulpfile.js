@@ -278,8 +278,8 @@ gulp.task('build:prod', done => {
 
             info.latest = JSON.parse(JSON.stringify(info[latest]));
 
-            fs.writeFileSync('../canvas-gauges-pages/_data/releases.json',
-                JSON.stringify(info, null, 2));
+            // fs.writeFileSync('./canvas-gauges-pages/_data/releases.json',
+            //     JSON.stringify(info, null, 2));
 
             done();
         });
@@ -315,16 +315,16 @@ gulp.task('build:es5', ['clean'], done => {
         .pipe(gulp.dest('.'))
         .on('end', () => {
             if (!process.env.TRVIS) {
-                fs.writeFileSync(
-                    '../canvas-gauges-pages/' +
-                    'assets/js/gauge.min.js',
-                    fs.readFileSync('gauge.min.js')
-                );
-                fs.writeFileSync(
-                    '../canvas-gauges-pages/' +
-                    'assets/js/gauge.min.js.map',
-                    fs.readFileSync('gauge.min.js.map')
-                );
+                // fs.writeFileSync(
+                //     './canvas-gauges-pages/' +
+                //     'assets/js/gauge.min.js',
+                //     fs.readFileSync('gauge.min.js')
+                // );
+                // fs.writeFileSync(
+                //     './canvas-gauges-pages/' +
+                //     'assets/js/gauge.min.js.map',
+                //     fs.readFileSync('gauge.min.js.map')
+                // );
             }
 
             done();
@@ -400,9 +400,9 @@ gulp.task('doc', ['clean:docs'], done => {
 
             //move to pages
 
-            let target = '../canvas-gauges-pages/docs/' + version;
+            // let target = './canvas-gauges-pages/docs/' + version;
 
-            rimraf(target, () => fs.rename('docs', target, done));
+            // rimraf(target, () => fs.rename('docs', target, done));
         });
 });
 
