@@ -16,7 +16,73 @@
 
 <!-- default gauge -->
 <canvas data-type="radial-gauge" data-width="200" data-height="200"></canvas>
+
+<canvas id="canvas-linear-id"
+></canvas>
+
+
 <script>
+
+var linearGauge = new LinearGauge({
+    renderTo: 'canvas-linear-id',
+    width: 150,
+    value: 54.99,
+    height: 200,
+    units: "%",
+    yUnitsOffsetDivisor: .095,
+    title: "54.99",
+    xTitleOffsetDivisor: 1.25,
+    yTitleOffsetDivisor: .20,
+    minValue: 0,
+    maxValue: 100,
+    valueBox: false,
+    majorTicks: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+    fontTitleSize: 34,
+    fontUnitsSize: 20,
+    fontValueSize: 0,
+    fontNumbers: 'Roboto',
+    fontTitle: 'Roboto',
+    fontUnits: 'Roboto',
+    fontValue: 'Roboto',
+    majorTickOffsetDivisor: 4,
+    majorTicksWidthAddr: 15,
+    exactTicks: false,
+    strokeTicks: false,
+    majorTicksLengthAddr: 0,
+    majorTicksMoveToAddr: .5,
+    ticksWidth: 16,
+    ticksWidthMinor: 0,
+    ticksPadding: 0,
+    colorMajorTicks: [ 'rgba(116, 255, 171, .1)', 'rgba(51, 214, 154,.2)', 'rgba(51, 214, 154,.3)', 'rgba(51, 214, 154,.4)', 'rgba(51, 214, 154,.6)', 'rgba(51, 214, 154,.9)', 'rgba(116, 255, 171, .1)', 'rgba(51, 214, 154,.1)', 'rgba(51, 214, 154,.1)', 'rgba(51, 214, 154,.1)', 'rgba(51, 214, 154,.1)', 'rgba(51, 214, 154,.1)'],
+    majorTicksDisplay: false,
+    highlights: [],
+    colorPlate: "#000",
+    colorMinorTicks: "#ffe66a",
+    colorTitle: "#eee",
+    colorUnits: "#ccc",
+    colorNumbers: "#eee",
+    borderShadowWidth: 0,
+    borders: false,
+    barBeginCircle: false,
+    tickSide: "left",
+    numberSide: "left",
+    needleSide: "left",
+    needleType: "line",
+    needleWidth: 1,
+    colorNeedle: "#eee",
+    colorNeedleEnd: "#eee",
+    animationDuration: 1500,
+    animationRule: "linear",
+    animationTarget: "plate",
+    barWidth: 0,
+    barStrokeWidth: 0
+//    barLength: 50,
+//    ticksWidth: 0,
+}).draw();
+
+
+
+
 
 
 var gauge = new RadialGauge({
@@ -28,10 +94,9 @@ var gauge = new RadialGauge({
     title: "54.99",
     valueBox: false,
     majorTicks: [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100],
-    majorTicksWidthAddr: 12,
+    majorTicksWidthAddr: 25,
     majorTicksLengthAddr: 0.195,
     majorTicksMoveToAddr: 1,
-
     majorTicksDisplay: false,
 //    minorTicks: 25,
     // minorTicksWidthAddr: 13,
